@@ -1,0 +1,3 @@
+#!/bin/bash
+(echo .; echo ..; ls -A | grep -v ^\. | sort -f) | paste -sd,\n -
+

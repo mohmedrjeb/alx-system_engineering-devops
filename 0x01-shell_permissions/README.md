@@ -1,0 +1,1 @@
+permmision in shell

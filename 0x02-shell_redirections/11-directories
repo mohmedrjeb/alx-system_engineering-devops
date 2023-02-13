@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -lR | grep "^d" | grep -v "^d.*\(\.\|\.\.)$" | wc -l | awk '{print "Number of directories (including hidden): " $1}'
+find . -type d -mindepth 1 | wc -l

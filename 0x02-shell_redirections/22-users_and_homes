@@ -1,2 +1,2 @@
 #!/bin/bash
-cut -d: -f1,6 /etc/passwd | sort | tr ':' ' ' | while read user dir; do echo "$user: $dir"; done
+cut -d":" --fields=1,6 /etc/passwd | sort

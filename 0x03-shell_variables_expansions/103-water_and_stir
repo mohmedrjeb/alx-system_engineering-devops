@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "The result is: $(($(echo ${WATER^^} | tr 'A-Z' '0-9')#${WATER^^})) + $(($(echo ${STIR^^} | tr 'A-Z' '0-9')#${STIR^^}))" | xargs printf 'obase=bestchol;%d\n' | bc
+echo "The result is: $(echo "$WATER" | tr 'water' '01234') + $(echo "$STIR" | tr 'stir.' '01234') " | dc | tr -d '\\' | xargs printf 'obase=bestchol;%d\n' | bc
